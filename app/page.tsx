@@ -11,14 +11,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Points, PointMaterial } from "@react-three/drei"
+import { Points, PointMaterial, Environment, Sphere } from "@react-three/drei"
 import * as THREE from "three"
 
 // Boids simulation component
-function BoidsSimulation() {
+function BoidsSimulation({ mousePosition }: { mousePosition: { x: number; y: number } }) {
   const pointsRef = useRef<THREE.Points>(null)
   const [boids] = useState(() => {
-    const boidCount = 100
+    const boidCount = 23
     const boids = []
     for (let i = 0; i < boidCount; i++) {
       boids.push({
@@ -36,6 +36,9 @@ function BoidsSimulation() {
   useFrame((state) => {
     if (!pointsRef.current) return
 
+    const { viewport } = state
+    const target = new THREE.Vector3((mousePosition.x * viewport.width) / 2, (mousePosition.y * viewport.height) / 2, 0)
+
     const positions = pointsRef.current.geometry.attributes.position.array as Float32Array
 
     boids.forEach((boid, i) => {
@@ -48,7 +51,7 @@ function BoidsSimulation() {
       boids.forEach((other, j) => {
         if (i !== j) {
           const distance = boid.position.distanceTo(other.position)
-          if (distance < 2) {
+          if (distance < 3) {
             // Separation
             const diff = new THREE.Vector3().subVectors(boid.position, other.position)
             diff.normalize()
@@ -68,18 +71,23 @@ function BoidsSimulation() {
         cohesion.divideScalar(neighbors)
         cohesion.sub(boid.position)
 
-        separation.multiplyScalar(0.05)
-        alignment.multiplyScalar(0.01)
-        cohesion.multiplyScalar(0.01)
+        separation.multiplyScalar(0.1)
+        alignment.multiplyScalar(0.05)
+        cohesion.multiplyScalar(0.005)
 
         boid.velocity.add(separation)
         boid.velocity.add(alignment)
         boid.velocity.add(cohesion)
       }
 
+      // Attraction to mouse
+      const attraction = new THREE.Vector3().subVectors(target, boid.position)
+      attraction.multiplyScalar(0.001)
+      boid.velocity.add(attraction)
+
       // Limit speed
-      if (boid.velocity.length() > 0.1) {
-        boid.velocity.normalize().multiplyScalar(0.1)
+      if (boid.velocity.length() > 0.2) {
+        boid.velocity.normalize().multiplyScalar(0.2)
       }
 
       // Update position
@@ -213,17 +221,13 @@ export default function LucidSolutionDesigners() {
       <section className="relative pt-32 pb-20 px-4 min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
-            <BoidsSimulation />
+            <BoidsSimulation mousePosition={mousePosition} />
+            <Environment preset="city" />
           </Canvas>
         </div>
 
         <div className="container mx-auto text-center max-w-6xl relative z-10">
-          <div
-            className="transform transition-transform duration-1000"
-            style={{
-              transform: `translate(${mousePosition.x * 10}px, ${mousePosition.y * 10}px)`,
-            }}
-          >
+          <div className="flex flex-col items-center justify-center">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-tight">
               <span className="glow-text">We Don't Predict the Future.</span>
               <br />
@@ -231,13 +235,13 @@ export default function LucidSolutionDesigners() {
               <br />
               <span className="text-gray-400 text-4xl md:text-6xl glow-text-subtle">from First Principles.</span>
             </h1>
-          </div>
+
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed opacity-90">
             A creative technology and venture studio that transforms fundamental insights about intelligence, systems,
             and human potential into world-class companies, transformative technologies, and thought-provoking art.
           </p>
-
+          </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
@@ -476,18 +480,6 @@ export default function LucidSolutionDesigners() {
                   breakthrough technologies create positive impact.
                 </p>
                 <p className="font-semibold text-blue-400 glow-text-blue">He charts the course and builds the ship.</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-16">
-            <Card className="max-w-3xl mx-auto bg-gradient-to-r from-blue-900/20 to-gray-900/50 border-blue-700/50 backdrop-blur-sm glow-card-intense">
-              <CardContent className="pt-8 pb-8">
-                <h3 className="text-3xl font-bold mb-6 glow-text">The Synergy</h3>
-                <p className="text-gray-300 text-xl leading-relaxed">
-                  Together, they represent the full stack of innovation—from philosophical inquiry to market-ready
-                  product. The visionary and the builder. The "Why" and the "How."
-                </p>
               </CardContent>
             </Card>
           </div>
