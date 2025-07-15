@@ -39,7 +39,7 @@ export default function FoundersPage() {
         <section id="founders">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text">The Founders</h2>
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text font-heading">The Founders</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 A synergistic partnership between visionary technology and strategic execution
               </p>
@@ -58,7 +58,7 @@ export default function FoundersPage() {
                       className="rounded-full opacity-80"
                     />
                   </div>
-                  <CardTitle className="text-3xl glow-text text-white">Eliáš Bauer</CardTitle>
+                  <CardTitle className="text-3xl glow-text text-white font-heading">Eliáš Bauer</CardTitle>
                   <CardDescription className="text-lg text-purple-400 font-semibold">
                     Chief Inventor & Player-Coach
                   </CardDescription>
@@ -88,7 +88,7 @@ export default function FoundersPage() {
                       className="rounded-full opacity-80"
                     />
                   </div>
-                  <CardTitle className="text-3xl glow-text text-white">Petr Václavek</CardTitle>
+                  <CardTitle className="text-3xl glow-text text-white font-heading">Petr Václavek</CardTitle>
                   <CardDescription className="text-lg text-purple-400 font-semibold">
                     Ethical Venture Builder
                   </CardDescription>

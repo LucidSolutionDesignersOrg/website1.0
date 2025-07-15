@@ -193,9 +193,9 @@ export default function LucidSolutionDesigners() {
         <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl border-b border-gray-800 z-50">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="text-2xl font-bold tracking-tight">
-              <span className="text-white glow-text">LUCID</span>
+              <span className="text-white font-light font-heading glow-text">LUCID</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
+              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 font-heading">
                 SOLUTION DESIGNERS
               </span>
             </div>
@@ -227,12 +227,12 @@ export default function LucidSolutionDesigners() {
 
           <div className="container mx-auto text-center max-w-6xl relative z-10">
             <div className="flex flex-col items-center justify-center">
-              <h1 className="mb-10">
-                <span className="block text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-lg animate-fade-in">
-                  We Don't Predict the Future.
+              <h1 className="mb-10 font-heading">
+                <span className="block text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-lg animate-fade-in">
+                  We don't predict the future.
                 </span>
                 <span className="block text-5xl md:text-8xl lg:text-9xl font-black tracking-tight text-white glow-text mt-4 animate-fade-in-slow">
-                  We Design It
+                  We design it
                 </span>
                 <span className="block text-2xl md:text-4xl lg:text-5xl text-purple-300 glow-text-subtle italic mt-6 animate-fade-in-delay">
                   from First Principles.
@@ -270,7 +270,7 @@ export default function LucidSolutionDesigners() {
         {/* Mission Statement */}
         <section className="py-20 bg-gradient-to-b from-gray-900/50 to-black relative z-10">
           <div className="container mx-auto px-4 text-center max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 glow-text">Our Mission</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 glow-text font-heading">Our Mission</h2>
             <p className="text-xl text-gray-300 leading-relaxed glow-text-subtle">
               To design and build the future by transforming fundamental insights about intelligence, systems, and human
               potential into world-class companies, transformative technologies, and thought-provoking art.
@@ -282,7 +282,7 @@ export default function LucidSolutionDesigners() {
         <section id="work" className="py-20 relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text">Our Work</h2>
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text font-heading">Our Work</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Three pillars that bridge the gap between complex ideas and human understanding
               </p>
@@ -295,7 +295,7 @@ export default function LucidSolutionDesigners() {
                   <div className="w-20 h-20 bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-icon">
                     <Brain className="h-10 w-10 text-purple-400" />
                   </div>
-                  <CardTitle className="text-2xl mb-2 glow-text text-white">The Inverted Incubator</CardTitle>
+                  <CardTitle className="text-2xl mb-2 glow-text text-white font-heading">The Inverted Incubator</CardTitle>
                   <CardDescription className="text-lg text-purple-400">Venture Studio</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -319,7 +319,7 @@ export default function LucidSolutionDesigners() {
                   <div className="w-20 h-20 bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-icon">
                     <Lightbulb className="h-10 w-10 text-purple-400" />
                   </div>
-                  <CardTitle className="text-2xl mb-2 glow-text text-white">Client Solutions</CardTitle>
+                  <CardTitle className="text-2xl mb-2 glow-text text-white font-heading">Client Solutions</CardTitle>
                   <CardDescription className="text-lg text-purple-400">Strategic Consulting</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -343,7 +343,7 @@ export default function LucidSolutionDesigners() {
                   <div className="w-20 h-20 bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-icon">
                     <Palette className="h-10 w-10 text-purple-400" />
                   </div>
-                  <CardTitle className="text-2xl mb-2 glow-text text-white">Art & Exploration</CardTitle>
+                  <CardTitle className="text-2xl mb-2 glow-text text-white font-heading">Art & Exploration</CardTitle>
                   <CardDescription className="text-lg text-purple-400">Creative Works</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -368,14 +368,14 @@ export default function LucidSolutionDesigners() {
         <section id="philosophy" className="py-20 bg-gradient-to-b from-black to-gray-900/50 relative z-10">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text">Our Philosophy</h2>
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text font-heading">Our Philosophy</h2>
               <p className="text-xl text-gray-400">The fundamental principles that drive our approach to innovation</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               <Card className="bg-purple-900/20 border-gray-700 backdrop-blur-sm glow-card-subtle">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-white glow-text">Life as Problem-Solving Matter</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white glow-text font-heading">Life as Problem-Solving Matter</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We believe that life itself is a computational process—an emergent phenomenon of matter organizing
                     itself to solve problems. This insight guides our approach to building intelligent systems and
@@ -386,7 +386,7 @@ export default function LucidSolutionDesigners() {
 
               <Card className="bg-purple-900/20 border-gray-700 backdrop-blur-sm glow-card-subtle">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-white glow-text">Long-Term Laziness</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white glow-text font-heading">Long-Term Laziness</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We invest effort now to build elegant, leveraged systems that create compounding value. By designing
                     robust foundations, we enable exponential returns on our intellectual investment.
@@ -396,7 +396,7 @@ export default function LucidSolutionDesigners() {
 
               <Card className="bg-purple-900/20 border-gray-700 backdrop-blur-sm glow-card-subtle">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-white glow-text">Emergent Systems</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white glow-text font-heading">Emergent Systems</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Complex behaviors arise from simple rules. We study and harness emergence—from flocking algorithms to
                     neural networks—to create solutions that are greater than the sum of their parts.
@@ -406,7 +406,7 @@ export default function LucidSolutionDesigners() {
 
               <Card className="bg-purple-900/20 border-gray-700 backdrop-blur-sm glow-card-subtle">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-white glow-text">First Principles Thinking</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white glow-text font-heading">First Principles Thinking</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We break down complex problems to their fundamental components, questioning assumptions and building
                     solutions from the ground up. This approach reveals opportunities others miss.
@@ -420,7 +420,7 @@ export default function LucidSolutionDesigners() {
         {/* Join Us CTA */}
         <section id="join" className="py-20 bg-gradient-to-r from-purple-900/30 to-black relative z-10">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text">Solve a Problem Worth Solving</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 glow-text font-heading">Solve a Problem Worth Solving</h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto text-gray-300 leading-relaxed">
               Join us as a co-founder and help build the next generation of intelligent systems, transformative ventures,
               and boundary-pushing art.
@@ -439,7 +439,7 @@ export default function LucidSolutionDesigners() {
         <section className="py-20 bg-gradient-to-b from-black to-gray-900/50 relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 glow-text">Bring a New Paradigm to Your Business</h2>
+              <h2 className="text-5xl font-bold mb-6 glow-text font-heading">Bring a New Paradigm to Your Business</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Ready to transform your organization with cutting-edge technology and systems thinking?
               </p>
@@ -450,7 +450,7 @@ export default function LucidSolutionDesigners() {
                 <div className="flex flex-col items-center justify-center">
                   <Card className="bg-purple-900/50 border-gray-700 backdrop-blur-sm glow-card w-full">
                     <CardHeader>
-                      <CardTitle className="text-3xl glow-text text-white">Schedule a Consultation</CardTitle>
+                      <CardTitle className="text-3xl glow-text text-white font-heading">Schedule a Consultation</CardTitle>
                       <CardDescription className="text-gray-400">
                         Let's discuss how we can help solve your most complex challenges
                       </CardDescription>
@@ -467,7 +467,7 @@ export default function LucidSolutionDesigners() {
 
                 <DialogContent className="bg-black/80 backdrop-blur-xl border-gray-800 text-white">
                   <DialogHeader>
-                    <DialogTitle className="text-3xl glow-text text-white">Schedule a Consultation</DialogTitle>
+                    <DialogTitle className="text-3xl glow-text text-white font-heading">Schedule a Consultation</DialogTitle>
                     <DialogDescription className="text-gray-400">
                       Let's discuss how we can help solve your most complex challenges
                     </DialogDescription>
@@ -501,7 +501,7 @@ export default function LucidSolutionDesigners() {
               <div className="space-y-8">
             {/*     <Card className="bg-purple-900/50 border-gray-700 backdrop-blur-sm glow-card-subtle">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 glow-text">Get in Touch</h3>
+                    <h3 className="text-2xl font-bold mb-6 glow-text font-heading">Get in Touch</h3>
                     <div className="space-y-6">
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center glow-icon">
@@ -527,7 +527,7 @@ export default function LucidSolutionDesigners() {
  */}
                 <Card className="bg-purple-900/50 border-gray-700 backdrop-blur-sm glow-card-subtle">
                   <CardContent className="p-8">
-                    <h4 className="text-xl font-semibold mb-4 text-white glow-text">What We Offer</h4>
+                    <h4 className="font-semibold mb-4 text-white glow-text font-heading">What We Offer</h4>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-purple-400 rounded-full glow-dot"></div>
@@ -562,7 +562,7 @@ export default function LucidSolutionDesigners() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
-                <div className="text-3xl font-bold mb-6">
+                <div className="text-3xl font-bold mb-6 font-heading">
                   <span className="glow-text">LUCID</span>{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
                     SOLUTION DESIGNERS
@@ -574,7 +574,7 @@ export default function LucidSolutionDesigners() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-6 text-purple-400 glow-text-purple">Our Work</h4>
+                <h4 className="font-semibold mb-6 text-purple-400 glow-text-purple font-heading">Our Work</h4>
                 <ul className="space-y-3 text-gray-400">
                   <li>
                     <Link href="#" className="transition-colors">
@@ -594,7 +594,7 @@ export default function LucidSolutionDesigners() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-6 text-purple-400 glow-text-purple">Connect</h4>
+                <h4 className="font-semibold mb-6 text-purple-400 glow-text-purple font-heading">Connect</h4>
                 <ul className="space-y-3 text-gray-400">
                   <li>
                     <Link href="#" className="transition-colors">
@@ -636,7 +636,7 @@ export default function LucidSolutionDesigners() {
 
         <DialogContent className="bg-black/80 backdrop-blur-xl border-gray-800 text-white">
           <DialogHeader>
-            <DialogTitle className="text-3xl glow-text">Become a Co-Founder</DialogTitle>
+            <DialogTitle className="text-3xl glow-text font-heading">Become a Co-Founder</DialogTitle>
             <DialogDescription className="text-gray-400">
               Tell us about yourself and the problems you're passionate about solving
             </DialogDescription>
